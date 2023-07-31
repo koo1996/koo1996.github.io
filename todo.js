@@ -8,7 +8,7 @@ const TODOS_LS = 'toDos';
 
 let toDos = [];
 
-
+// todo 삭제하기
 function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
@@ -25,7 +25,7 @@ function saveToDos(){
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
-
+// todo 불러오기
 function loadToDos(){
     const toDosLoaded = localStorage.getItem(TODOS_LS);
     if(toDosLoaded !== null){
@@ -36,7 +36,7 @@ function loadToDos(){
     }
 }
 
-
+// todo 생성 및 출력하기
 function paintToDo(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
